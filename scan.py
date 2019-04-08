@@ -10,7 +10,7 @@ url = 'https://www.crunchyroll.com/forumtopic-803801/the-official-guest-pass-thr
 saved_post_list = []
 firstRun = True
 count = 0
-frequency = 1500  # 2500 Hertz
+frequency = 1500  # 1500 Hertz
 duration = 1000  # 1000 ms
 
 print("Running Scanner!") # Alert the user that the program has begun.
@@ -25,7 +25,7 @@ while (True):
 	# If we loaded some real data (non-empty), then attempt to save it and potentially
 	# alert the user of the script if the data is interesting.
 	if post_list != saved_post_list and post_list != [] and post_list != None:
-		# We don't want alerts on the first time that data is loaded, so we use a simple boolean flag to hnadle program flow.
+		# We don't want alerts on the first time that data is loaded, so we use a simple boolean flag to handle program flow.
 		if firstRun == False:
 			print(datetime.datetime.now(), ': ', "Post detected!!!")
 			
@@ -44,7 +44,7 @@ while (True):
 		else:
 			firstRun = False
 		
-		# Always update the svaed post list with the latest non-empty data.
+		# Always update the saved post list with the latest non-empty data.
 		saved_post_list = post_list
 	
 	# Always output every 10 seconds whether any changes occured.
